@@ -9,10 +9,18 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo / Brand Name */}
           <div className="flex-shrink-0">
-            <a href="/" className="font-serif text-xl tracking-wide uppercase font-bold text-white hover:text-brand-accent transition-colors">
-              Moonstone <span className="text-sm block font-sans tracking-widest text-brand-secondary font-normal -mt-1">Construction</span>
-            </a>
-          </div>
+            <a href="/" className="flex items-center gap-3">
+               <img 
+                 src="/assets/images/logo.webp" 
+                 alt="Moonstone Construction Logo" 
+                 className="h-12 w-auto object-contain mix-blend-multiply" 
+             />
+             <span className="font-serif text-xl tracking-wide uppercase font-bold text-white">
+               Moonstone
+             </span>
+           </a>
+         </div>
+
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
