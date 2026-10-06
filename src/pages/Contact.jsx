@@ -39,7 +39,7 @@ export default function Contact() {
               Brad's current local availability window for verified on-site structural estimates:
             </p>
             <div className="inline-block bg-stone-800 px-4 py-2.5 rounded text-xs font-semibold text-white">
-              📅 <layout>followupButton(query="""Add this walkthrough slot to my calendar""", label="""Monday, October 12, 2026 at 9:00 AM MDT""", variant=FOLLOWUP_BUTTON_VARIANT_DATE_DROPDOWN)</layout>
+              📅 Monday, October 12, 2026 at 9:00 AM MDT
             </div>
           </div>
         </div>

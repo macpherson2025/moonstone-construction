@@ -73,7 +73,7 @@ export default function Home() {
           <div className="inline-block bg-white p-4 rounded-lg shadow-sm border border-stone-200 font-sans">
             <span className="text-sm font-semibold text-brand-secondary block sm:inline sm:mr-3">Next available consultation opening:</span>
             <strong className="text-brand-accent">
-              <layout>followupButton(query="""Add this match to my calendar""", label="""Monday, October 12, 2026 at 9:00 AM MDT""", variant=FOLLOWUP_BUTTON_VARIANT_DATE_DROPDOWN)</layout>
+              Monday, October 12, 2026 at 9:00 AM MDT
             </strong>
           </div>
         </div>
