@@ -8,10 +8,11 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          primary: '#1c1917',   // Deep Stone Charcoal for structural layouts & typography
-          secondary: '#78716c', // Mid-tone Slate for subheadings & borders
-          accent: '#b45309',    // Rich Amber Gold for primary call-to-actions & details
-          light: '#f5f5f4',     // Soft Warm Off-White for clean alternating rows
+          primary: '#2d312e',   // Muted Charcoal/Olive mix for grounding text & frames
+          secondary: '#6b706c', // Understated Mossy-Slate for supporting subheadings
+          accent: '#8f9779',    // Soft Sage Green for subtle, organic call-to-actions
+          light: '#f4f3ef',     // Gentle Warm Chalk/Alabaster for backgrounds
+          sand: '#dfdbd4',      // Soft Neutral Sand tone for dividers and borders
         }
       },
       fontFamily: {
