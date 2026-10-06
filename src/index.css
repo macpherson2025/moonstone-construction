@@ -1,0 +1,11 @@
+@import url('https://googleapis.com');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased bg-brand-light text-brand-primary;
+  }
+}
