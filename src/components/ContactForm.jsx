@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { footerData } from '../data/siteData';
 
+const WORKER_URL = 'https://moonstone-worker.mickens-piercy.workers.dev';
+
 const emptyValues = {
   fullName: '',
   phone: '',
@@ -19,18 +21,17 @@ function validate(values) {
 
 function buildPayload(values) {
   return {
-    fullName: values.fullName.trim(),
+    name: values.fullName.trim(),
     phone: values.phone.trim(),
     location: values.location.trim(),
-    projectDetails: values.projectDetails.trim(),
+    details: values.projectDetails.trim(),
   };
 }
 
 export default function ContactForm() {
   const [values, setValues] = useState(emptyValues);
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState('');
-  const [pending, setPending] = useState(false);
+  const [submitState, setSubmitState] = useState('idle');
 
   const updateField = (field) => (event) => {
     setValues((current) => ({ ...current, [field]: event.target.value }));
@@ -41,16 +42,15 @@ export default function ContactForm() {
     const nextErrors = validate(values);
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) {
-      setStatus('');
+      setSubmitState('idle');
       return;
     }
 
     const payload = buildPayload(values);
-    setPending(true);
-    setStatus('');
+    setSubmitState('loading');
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(WORKER_URL, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -60,18 +60,23 @@ export default function ContactForm() {
       });
 
       if (!response.ok) {
-        setStatus(`The form could not be sent. Try again or call ${footerData.phone}.`);
+        setSubmitState('error');
         return;
       }
 
       setValues(emptyValues);
-      setStatus('Your project details were sent.');
+      setErrors({});
+      setSubmitState('success');
     } catch {
-      setStatus(`The form could not be sent. Try again or call ${footerData.phone}.`);
-    } finally {
-      setPending(false);
+      setSubmitState('error');
     }
   };
+
+  const statusMessage = {
+    loading: 'Sending your project details.',
+    success: 'Your project details were sent.',
+    error: `The form could not be sent. Call ${footerData.phone}.`,
+  }[submitState];
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5 border border-brand-sand bg-white p-6">
@@ -126,15 +131,15 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        disabled={pending}
+        disabled={submitState === 'loading'}
         className="bg-brand-primary px-4 py-2.5 font-sans text-sm font-semibold text-brand-light disabled:opacity-60"
       >
-        {pending ? 'Sending' : 'Send project details'}
+        {submitState === 'loading' ? 'Sending' : 'Send project details'}
       </button>
 
-      {status && (
-        <p className="font-sans text-sm text-brand-primary" role="status">
-          {status}
+      {statusMessage && (
+        <p className="font-sans text-sm text-brand-primary" role={submitState === 'error' ? 'alert' : 'status'}>
+          {statusMessage}
         </p>
       )}
     </form>
