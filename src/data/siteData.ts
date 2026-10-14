@@ -130,7 +130,7 @@ export const footerData: FooterData = {
     'Every contractor expounds the quality of their work and their trustworthiness. Moonstone can prove it. We have over 30 years’ worth of client references, letters of recommendation, awards and commendations to complement our A+ rating and Accreditation with the BBB. It is our job and our pleasure to bring your design concepts to life and we do so with a collaborative, creative and cost-conscious mindset.',
   phone: '303-926-2625',
   phoneHref: 'tel:3039262625',
-  email: 'moonstoneconstruction@comcast.net',
+  email: 'moonstone@moonstoneconstruction.com',
   street: '11240 Billings Ave',
   locality: 'Lafayette, CO 80026',
   hours: 'Mon - Fri: 9am - 5pm',

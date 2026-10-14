@@ -19,7 +19,7 @@ export default function Footer() {
           <address className="not-italic text-sm text-brand-secondary space-y-2">
             <p className="block">📍 11240 Billings Avenue, Lafayette, CO 80026</p>
             <p className="block">📞 (303) 926-2625</p>
-            <p className="block">✉️ info@moonstoneconstruction.com</p>
+            <p className="block">✉️ moonstone@moonstoneconstruction.com</p>
           </address>
         </div>
 

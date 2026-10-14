@@ -2,6 +2,7 @@ import React from 'react';
 import AboutSection from '../components/AboutSection';
 import ProjectGallery from '../components/ProjectGallery';
 import TestimonialSlider from '../components/TestimonialSlider';
+import ContactForm from '../components/ContactForm';
 
 export default function Home() {
   return (
@@ -79,6 +80,12 @@ export default function Home() {
               Monday, October 12, 2026 at 9:00 AM MDT
             </strong>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-light px-4 pb-16 sm:px-6">
+        <div className="mx-auto max-w-xl">
+          <ContactForm />
         </div>
       </section>
 
