@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Global Frame UI Layout Components
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import SiteHeader from './components/SiteHeader';
+import SiteFooter from './components/SiteFooter';
 
 // Page Template Importers
 import Home from './pages/Home';
@@ -18,7 +18,7 @@ export default function App() {
       <div className="flex flex-col min-h-screen bg-brand-light selection:bg-brand-accent/30 text-brand-primary">
         
         {/* Global Structural Header Navbar */}
-        <Navbar />
+        <SiteHeader />
 
         {/* Dynamic Route Viewport Component Frame */}
         <main className="flex-grow">
@@ -32,7 +32,7 @@ export default function App() {
         </main>
 
         {/* Global SEO-Optimized NAP Footer Module */}
-        <Footer />
+        <SiteFooter />
 
       </div>
     </Router>

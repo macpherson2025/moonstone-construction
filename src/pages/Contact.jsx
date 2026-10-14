@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
+import { footerData } from '../data/siteData';
 
 export default function Contact() {
   return (
@@ -22,13 +23,13 @@ export default function Contact() {
             <h3 className="font-serif font-bold text-lg text-brand-primary">Direct Communication</h3>
             <div className="text-sm text-brand-secondary space-y-2">
               <p className="flex items-center gap-2">
-                <span>📍</span> <strong>Office Address:</strong> 11240 Billings Avenue, Lafayette, CO 80026
+                <span>📍</span> <strong>Office Address:</strong> {footerData.street}, {footerData.locality}
               </p>
               <p className="flex items-center gap-2">
-                <span>📞</span> <strong>Estimates Line:</strong> (303) 926-2625
+                <span>📞</span> <strong>Estimates Line:</strong> {footerData.phone}
               </p>
               <p className="flex items-center gap-2">
-                <span>✉️</span> <strong>General Inbox:</strong> info@moonstoneconstruction.com
+                <span>✉️</span> <strong>General Inbox:</strong> {footerData.email}
               </p>
             </div>
           </div>

@@ -1,5 +1,7 @@
 import React from 'react';
+import AboutSection from '../components/AboutSection';
 import ProjectGallery from '../components/ProjectGallery';
+import TestimonialSlider from '../components/TestimonialSlider';
 
 export default function Home() {
   return (
@@ -59,8 +61,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. PORTFOLIO SHOWCASE */}
+      <AboutSection />
       <ProjectGallery />
+      <TestimonialSlider />
 
       {/* 4. CALL TO ACTION & CONSULTATION SCHEDULE */}
       <section className="bg-brand-light py-16 border-t border-stone-200">

@@ -40,7 +40,7 @@ export default function About() {
       </section>
 
       {/* 3. CORE LEADERSHIP BIOGRAPHY */}
-      <section className="py-16 bg-brand-light border-b border-stone-200">
+      <section id="team" className="scroll-mt-24 py-16 bg-brand-light border-b border-stone-200">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <span className="text-brand-accent font-semibold tracking-wider text-xs uppercase">Leadership Profile</span>
           <h2 className="text-3xl font-serif font-bold text-brand-primary mt-2 mb-6">Meet Brad Pederson</h2>
